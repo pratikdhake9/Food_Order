@@ -13,6 +13,8 @@ public class RestaurantDeo {
 
     @Column(length = 1000)
     private List<String>  image;
+
     private String description;
+
     private Long id;
 }
