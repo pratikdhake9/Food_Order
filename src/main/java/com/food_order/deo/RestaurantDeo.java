@@ -10,6 +10,7 @@ import java.util.List;
 @Embeddable
 public class RestaurantDeo {
     private String title;
+
     @Column(length = 1000)
     private List<String>  image;
     private String description;
