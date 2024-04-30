@@ -1,1 +1,1 @@
-# first commit - food entity  ..comnpleted
+# first commit - food entity  ..completed
