@@ -1,6 +1,5 @@
 package com.food_order.Model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -17,10 +16,8 @@ public class IngredientsItem {
     private String name;
     @ManyToOne
     private IngredientCategory category;
-    @JsonIgnore
     @ManyToOne
     private Restaurant restaurant;
-    private boolean instock=true;
+    private boolean isStoke=true;
 
 }
-//completed

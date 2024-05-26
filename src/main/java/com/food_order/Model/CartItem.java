@@ -1,25 +1,27 @@
 package com.food_order.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.boot.orm.jpa.hibernate.SpringImplicitNamingStrategy;
 
 import java.util.List;
-
-@Data
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class OrderItem {
+public class CartItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
+    @JsonIgnore
+    private Cart cart;
+    @ManyToOne
     private Food food;
     private int quantity;
-    private Long totalPrice;
     private List<String> ingredients;
+    private Long totalPrice;
 
 }

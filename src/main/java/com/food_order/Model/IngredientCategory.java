@@ -9,8 +9,8 @@ import lombok.NoArgsConstructor;
 import java.util.ArrayList;
 import java.util.List;
 
-@Data
 @Entity
+@Data
 @NoArgsConstructor
 @AllArgsConstructor
 public class IngredientCategory {
@@ -21,10 +21,6 @@ public class IngredientCategory {
     @JsonIgnore
     @ManyToOne
     private Restaurant restaurant;
-
-    @OneToMany(mappedBy = "category",cascade = CascadeType.ALL)
+    @OneToMany(mappedBy = "category" , cascade = CascadeType.ALL)
     private List<IngredientsItem> ingredients=new ArrayList<>();
-
-
 }
-//completed
