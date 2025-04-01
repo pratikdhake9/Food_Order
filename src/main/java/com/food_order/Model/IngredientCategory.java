@@ -18,6 +18,7 @@ public class IngredientCategory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String name;
+
     @JsonIgnore
     @ManyToOne
     private Restaurant restaurant;
